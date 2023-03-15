@@ -29,6 +29,14 @@ createApp({
     }
   },
 
+  methods: {
+
+    rimuoviToDo(index) {
+      this.toDos.splice(index , 1)
+    },
+
+  }
+
   
 }).mount('#app')
 

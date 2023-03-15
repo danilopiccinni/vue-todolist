@@ -19,7 +19,7 @@
 
     <ul>
       <li v-for="(toDo , index) in toDos" :style="(toDo.done) ? { textDecoration : 'line-through'} : {}">
-        {{toDo.text}}
+        {{toDo.text}} - <span @click="rimuoviToDo(index)">X</span>
       </li>
     </ul>
 
