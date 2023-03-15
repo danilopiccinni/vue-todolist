@@ -23,7 +23,7 @@
       </li>
     </ul>
 
-    <input type="text" v-model="nuovaCosa">
+    <input type="text" v-model="nuovaCosa" @keyup.enter="aggiungiLaCosa()">
     <button @click="aggiungiLaCosa()">Aggiungi</button>
 
   </div>
