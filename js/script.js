@@ -3,28 +3,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      toDos: [
-        {
-          text : 'pane',
-          done: true
-        },
-        {
-          text : 'formaggio',
-          done: true
-        },
-        {
-          text : 'farina',
-          done: false
-        },
-        {
-          text : 'latte',
-          done: true
-        },
-        {
-          text : 'salmone',
-          done : false
-        }
-      ],
+      toDos: [],
 
       nuovaCosa: '',
 
@@ -61,6 +40,16 @@ createApp({
             } else {
                 this.toDos[index].done = true
             }
+        },
+
+        svuota(){
+
+            this.toDos = []
+        },
+
+        focus() {
+            let input = document.getElementById('cosa-da-inserire');
+            input.focus()
         }
     }
 }).mount('#app')
