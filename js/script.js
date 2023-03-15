@@ -53,6 +53,14 @@ createApp({
 
                 this.nuovaCosa = ''
             }
+        },
+
+        fattoNonFatto(index) {
+            if (this.toDos[index].done) {
+                this.toDos[index].done = false
+            } else {
+                this.toDos[index].done = true
+            }
         }
     }
 }).mount('#app')

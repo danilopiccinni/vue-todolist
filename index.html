@@ -18,7 +18,7 @@
     </h1>
 
     <ul>
-      <li v-for="(toDo , index) in toDos" :style="(toDo.done) ? { textDecoration : 'line-through'} : {}">
+      <li v-for="(toDo , index) in toDos" @click="fattoNonFatto(index)" :style="(toDo.done) ? { textDecoration : 'line-through'} : {}">
         {{toDo.text}} - <span @click="rimuoviToDo(index)">X</span>
       </li>
     </ul>
